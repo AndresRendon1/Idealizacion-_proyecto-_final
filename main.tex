@@ -13,17 +13,15 @@
         \vspace*{1cm}
             
         \Huge
-        \textbf{Idealización proyecto final}
+        \textbf{Título del trabajo}
             
         \vspace{0.5cm}
         \LARGE
-        Informática II
+        Subtítulo
             
         \vspace{1.5cm}
             
-        \textbf{Andrés Felipe Rendón Villada}
-        \newline
-        \textbf{Daniel Andrés Agudelo Garcia}
+        \textbf{Nombres y Apellidos del autor}
             
         \vfill
             
@@ -41,45 +39,68 @@
 \tableofcontents
 \newpage
 \section{Sección introductoria}\label{intro}
-La programación cuenta con muchos ambitos en los cuales podremos crear programas para un objetivo en especifico, poniendo a prueba nuestros conocimientos como desarrolladores ; en esta ocasión realizare un juego usando el lenguaje de programacion c++ y el IDE Qt creator a continuacion podra encontrar una descripcion detallada de como fue el desarrollo del proyecto desde el inicio hasta tener listo el ejecutable del juego.
+Esta es la primera sección, podemos agregar algunos elementos adicionales y todo será escrito correctamente. Más aún, si una palabra es demasiado larga y tiene que ser truncada, babel tratará de truncarla correctamente dependiendo del idioma.
 
 \section{Sección de contenido} \label{contenido}
+Esta sección es para agregar toda la información correspondiente con código, citas, etc.
+\subsection{Citación}
+Vamos a citar por ejemplo un artículo de \textbf{Albert Einstein} \cite{einstein}.
+También es posible citar libros \cite{dirac} o documentos en línea \cite{knuthwebsite}.\\\\
+Revisar en la última sección el formato de las referencias en IEEE.
 
-\subsection{Descripción del juego}
-El juego tendra por nombre "Darkness", un rpg donde nuestro personaje principal será un caballero el cuál en medio de su viaje llegará a Brawood donde se dará cuenta que un gran misterio envuelve a este lugar, el objetivo de nuestro personaje es lograr sobrevivir 3 dias, al final de cada noche el jugador debera enfrentar un boss, cuando el jugador llegue al amancer final dependiendo de la opcion escogida por el jugador podra obtener 1 de los 3 finales posibles, el juego contara con zonas diferentes, y variedad de items (espadas,Ecos de sangre para realizar mejoras de vida y/o arma,pistolas,latigos como ardaria secundaria) los cuales le serviran para superar jefes y mazmorras del juego.
+\subsection{Incluir código en el documento}
+%
+A continuación, se presenta el código \ref{codigo_ejemplo}, que nos permite incluir en el informe partes de programa que requieran una explicación adicional.
+\begin{lstlisting}[language=C++, label=codigo_ejemplo]
+// Programa desarrollado, compilado y ejecutado en https://www.onlinegdb.com
+#include <iostream>
 
-\subsection{categoria del juego}
-plataformas \\
-accion aventura\\ 
-edad: +8 años\\
+/*
+ * Esto es un comentario de varias lineas
+ */
 
-\subsection{Historia del juego}
-El jugador tomará el rol de un caballero, el cuál llega en medio de una noche al pueblo de Bradwood. Un pueblo el cuál es conocido por los atributos que poseen sus habitantes en la sangre los cuales fueron vendencidos por "La fiera deidad" que les otorgo la capacidad de curar diversas enfermedades usando su sangre , pero surgio una organizacion denominada "Bloodborne" la cual se encargaba de hacer el estudio de la sangre y experimentar la mezcla de hechiceria con la sangre esto provoco que su sangre se corrompiera causando que los habitantes se conviertan en bestias para evitar que la "darkblood" se esparciera el rey "blooded" conforma un escuadron de caballeros denominada "fieryrebels" cuya mision es impedir que la darkblood se esparza
-y derrotar al creador de la "bloodborne" polux, el jugador tendra 3 dias para completar la mision.
+// Comentario de una sola linea
 
-\subsection{Personajes}
+#define N 10
 
-1. Personaje principal: Khorne\\
-2. Rey de Brawood : "blooded"\\
-3. Polux : Jefe de la bloodborne\\
-4. jefe zona 1: por definir nombre\\
-5, jefe zona 2: por definir nombre\\
-6. jefe zona 3: por definir nombre\\
+using namespace std;
 
-\subsection{Armas e Items}
+int main()
+{
+    
+    for( int i = 0 ; i < N ; i++ ){
+        
+        if( !(i % 2) )
+            cout << " El valor de i es -> " << i << endl;
+    }
+    
+    return 0;
+}
 
+//Resultado programa
+
+/*
+El valor de i es -> 0
+El valor de i es -> 2
+El valor de i es -> 4
+El valor de i es -> 6
+El valor de i es -> 8
+*/
+\end{lstlisting}
+En la sección \ref{imagenes}, se presentará como añadir ilustraciones al texto.
 
 \section{Inclusión de imágenes} \label{imagenes}
 
-En la Figura (\ref{fig:Darkness}), se presenta el logo del juego Darkness contenido en la carpeta images.
+En la Figura (\ref{fig:cpplogo}), se presenta el logo de C++ contenido en la carpeta images.
 
 \begin{figure}[h]
-\includegraphics[width=4cm]{Darkness.PNG}
+\includegraphics[width=4cm]{cpplogo.png}
 \centering
-\caption{Logo de Darkness}
-\label{fig:Darkness}
+\caption{Logo de C++}
+\label{fig:cpplogo}
 \end{figure}
 
+Las secciones (\ref{intro}), (\ref{contenido}) y (\ref{imagenes}) dependen del estilo del documento.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
